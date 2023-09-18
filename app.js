@@ -2,11 +2,12 @@
 const process = require('process');
 
 const {argv} = process;
+const sumar = require('./sumar')
 
-function caluladora(comando) {
+function caluladora(comando, a,b) {
     switch (comando) {
         case "sumar":
-            
+            return sumar(a,b)
             break;
             case "restar":
             
@@ -22,5 +23,5 @@ function caluladora(comando) {
     }
 }
 
-console.log(caluladora(argv[2],argv[3],argv[4]));
+console.log(caluladora(argv[2],+argv[3],+argv[4]));
 
