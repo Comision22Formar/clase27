@@ -1,16 +1,15 @@
 //todo: hacer el front de la calculadora
 const process = require('process');
-
+const restar = require('./restar');
 const {argv} = process;
 
-function caluladora(comando) {
+function caluladora(comando, a, b) {
     switch (comando) {
         case "sumar":
             
             break;
             case "restar":
-            
-            break;
+            return restar(a,b)
             case "multiplicar":
             
             break;
@@ -22,5 +21,5 @@ function caluladora(comando) {
     }
 }
 
-console.log(caluladora(argv[2],argv[3],argv[4]));
+console.log(caluladora(argv[2],+argv[3],+argv[4]));
 
