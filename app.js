@@ -4,6 +4,7 @@ const restar = require("./restar");
 const { argv } = process;
 const sumar = require("./sumar");
 const multiplicar = require("./multiplicar");
+const dividir = require("./dividir");
 
 function caluladora(comando, a, b) {
   switch (comando) {
@@ -14,7 +15,7 @@ function caluladora(comando, a, b) {
     case "multiplicar":
       return multiplicar(a,b);
     case "dividir":
-      break;
+      return dividir(a,b);
     default:
       return "comando no válido";
   }
